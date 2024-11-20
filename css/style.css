@@ -1,0 +1,146 @@
+
+@media (prefers-color-scheme: dark) {
+  /* DARK DEFAULT! Light mode styles go here! /
+	*/
+}
+
+@media screen and (max-width: 1000px) {
+  .column1 {
+    width: 100%;
+  }
+  .column2 {
+    width: 100%;
+  }
+  .column2 img {
+    margin: auto;
+  }
+  .socials1 img {
+    width: 26px;
+    height: 26px;
+    padding: 10px;
+    float: left;
+  }
+  .socials2 img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    float: left;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .column1 {
+    float: left;
+    width: 60%;
+  }
+  .column2 {
+    margin-left: 5%;
+    float: left;
+    width: 35%;
+  }
+  .column2 img {
+    margin: auto;
+  }
+
+  .socials1 img {
+    width: 34px;
+    height: 34px;
+    display: inline;
+    padding: 10px;
+    float: left;
+  }
+  .socials2 img {
+    width: 42px;
+    height: 42px;
+    display: inline;
+    padding: 10px;
+    float: left;
+  }
+}
+.writing {
+  display: inline;
+  color: #ababab;
+  font-weight: 100;
+  font-size: 21px;
+  margin-left: 3px;
+  margin-top: 10%;
+}
+html {
+  background: white;
+  --RD: black;
+  --a: #2c74ec;
+  --h4: black;
+  --wallets: #ababab;
+  --addy: black;
+}
+html[data-theme="dark"] {
+  background: black;
+  --RD: white;
+  --a: #2763cc;
+  --h4: white;
+  --wallets: #ababab;
+  --addy: white;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+* {
+  font-family: "helvetica";
+  font-weight: 100;
+}
+
+.RD,
+.RD a {
+  color: var(--RD);
+  font-size: 52px;
+}
+body {
+  margin-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-right: 10%;
+}
+a {
+  text-decoration: none;
+  color: #2c74ec;
+}
+p,
+h2,
+h3,
+h6 {
+  text-decoration: none;
+  display: inline;
+  color: #ababab;
+  font-weight: 100;
+  margin-top: 10%;
+}
+h6 {
+  font-size: 14px;
+}
+li {
+  color: #ababab;
+  margin: 10px;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 100;
+  display: inline;
+  color: var(--h4);
+}
+.wallets,
+.wallets p {
+  font-family: Courier;
+  font-size: 10px;
+  margin-right: 5%;
+  display: inline;
+}
+.wallets {
+  color: var(--wallets);
+}
+.wallets p {
+  color: var(--addy);
+}
