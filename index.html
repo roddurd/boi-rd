@@ -1,13 +1,116 @@
-<link rel="stylesheet" href="/css/style.css">
-<h1>Hi! I'm boi rd. I make music.<br> </h1>
-<h2>You can listen to it on most platforms, including <a href="https://open.spotify.com/artist/0cQD0L7QndSyRpjxNRyiF5?si=uFiDibNPSoyC3pGeY04aew"> Spotify</a>, <a href="https://music.apple.com/us/artist/boi-rd/1741258889">Apple Music</a>, <a href="https://music.youtube.com/channel/UCF7rhFDqO33h6dPwafgLJ0w?si=Ws4eQXdrWkYqwOl2">YouTube</a>, and <a href="https://www.soundcloud.com/boi-rd">SoundCloud</a>. </h2>
-<br><br>
-I also produce music for other artists, and make content online.
-You can find me on Instagram <a href="https://www.instagram.com/boi__rd">@boi__rd</a>. <br><br>
-If you want to license a beat or work with me, you can DM me there or email me at <a>boirdmusic@gmail.com</a>.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="boi rd — producer, artist. hip hop, electronic, hyperpop, r&b.">
+  <title>boi rd</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<br><br>
+  <!-- HEADER -->
+  <header>
+    <div class="logo-wrap">
+      <img class="logo logo-f1" src="assets/logo-frame1.png" width="1920" height="1080" alt="boi rd">
+      <img class="logo logo-f2" src="assets/logo-frame2.png" width="1920" height="1080" alt="" aria-hidden="true">
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#music">music</a>
+      <a href="#about">about</a>
+      <a href="#connect">connect</a>
+    </nav>
+  </header>
 
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <h1 class="hero-name">boi rd</h1>
 
-If you want to stay up to date on my latest releases, events, and more (like unreleased demos!) you should sign up for my mailing list: 
-<script async data-uid="4f436491b4" src="https://boi-rd.kit.com/4f436491b4/index.js"></script>
+      <!-- Marquee: content duplicated for seamless CSS-only loop -->
+      <div class="marquee-wrap" aria-label="producer · artist · roddur dasgupta · hip hop · electronic · hyperpop · r&b">
+        <div class="marquee" aria-hidden="true">
+          <span>producer&nbsp;·&nbsp;artist&nbsp;·&nbsp;roddur dasgupta&nbsp;·&nbsp;hip hop&nbsp;·&nbsp;electronic&nbsp;·&nbsp;hyperpop&nbsp;·&nbsp;r&amp;b&nbsp;·&nbsp;&nbsp;&nbsp;</span><span>producer&nbsp;·&nbsp;artist&nbsp;·&nbsp;roddur dasgupta&nbsp;·&nbsp;hip hop&nbsp;·&nbsp;electronic&nbsp;·&nbsp;hyperpop&nbsp;·&nbsp;r&amp;b&nbsp;·&nbsp;&nbsp;&nbsp;</span>
+        </div>
+      </div>
+
+      <!-- Photo wrapper: decos are positioned relative to the photo corners -->
+      <div class="photo-hero-wrap">
+        <img src="assets/photo-1.jpg" width="3648" height="5472" alt="boi rd" class="photo-hero">
+        <img src="assets/star.png" width="800" height="800" alt="" class="deco-star" aria-hidden="true">
+        <img src="assets/moon.png" width="800" height="800" alt="" class="deco-moon" aria-hidden="true">
+        <img src="assets/sparkle.png" width="800" height="800" alt="" class="deco-sparkle deco-sparkle-1" aria-hidden="true">
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section id="music">
+    <p class="section-label">music</p>
+    <div class="music-inner">
+
+      <img src="assets/cover-art.jpg" width="1024" height="1024" alt="latest release cover art" class="cover-art">
+
+      <div class="music-right">
+        <div class="now-playing">
+          <span class="now-playing-label">&#9654; now playing</span>
+          <span class="now-playing-title">latest release</span>
+        </div>
+        <div class="streaming-links">
+          <a href="https://open.spotify.com/artist/0cQD0L7QndSyRpjxNRyiF5?si=uFiDibNPSoyC3pGeY04aew" class="stream-btn" target="_blank" rel="noopener">spotify</a>
+          <a href="https://music.apple.com/us/artist/boi-rd/1741258889" class="stream-btn" target="_blank" rel="noopener">apple music</a>
+          <a href="https://music.youtube.com/channel/UCF7rhFDqO33h6dPwafgLJ0w?si=Ws4eQXdrWkYqwOl2" class="stream-btn" target="_blank" rel="noopener">youtube</a>
+          <a href="https://www.soundcloud.com/boi-rd" class="stream-btn" target="_blank" rel="noopener">soundcloud</a>
+        </div>
+      </div>
+    </div>
+
+    <img src="assets/sparkle.png" width="800" height="800" alt="" class="deco-sparkle deco-sparkle-2" aria-hidden="true" loading="lazy">
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">about</p>
+    <div class="about-inner">
+
+      <!-- Off-White card — warm tactile surface against the dark canvas -->
+      <div class="about-card">
+        <p>boi rd is the producer-artist project of roddur dasgupta. making hip hop, electronic, hyperpop, and r&amp;b with an unapologetically south asian perspective.</p>
+        <p class="about-contact">for beats &amp; collabs: <a href="mailto:boirdmusic@gmail.com">boirdmusic@gmail.com</a></p>
+      </div>
+
+      <img src="assets/photo-2.jpg" width="3648" height="5472" alt="boi rd" class="photo-about" loading="lazy">
+
+      <!-- REPLACE: <img src="assets/arrow-right.png" width="60" height="30" alt="" class="deco-arrow-right" aria-hidden="true"> -->
+      <div class="deco-arrow-right" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect">
+    <p class="section-label">connect</p>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/boi__rd" class="social-btn" target="_blank" rel="noopener">instagram</a>
+      <a href="#" class="social-btn">twitter / x</a><!-- UPDATE: add real URL -->
+      <a href="#" class="social-btn">tiktok</a><!-- UPDATE: add real URL -->
+      <a href="https://music.youtube.com/channel/UCF7rhFDqO33h6dPwafgLJ0w" class="social-btn" target="_blank" rel="noopener">youtube</a>
+    </div>
+
+    <div class="guestbook-wrap">
+      <p class="guestbook-label">stay in the loop ↓</p>
+      <!-- REPLACE: <img src="assets/arrow-down.png" width="30" height="40" alt="" class="deco-arrow-down" aria-hidden="true"> -->
+      <div class="deco-arrow-down" aria-hidden="true"></div>
+      <script async data-uid="4f436491b4" src="https://boi-rd.kit.com/4f436491b4/index.js"></script>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="assets/star.png" width="800" height="800" alt="" class="deco-star-sm" aria-hidden="true" loading="lazy">
+    <span class="footer-copy">© boi rd 2026</span>
+    <span class="footer-love">made with love</span>
+  </footer>
+
+</body>
+</html>
