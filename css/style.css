@@ -96,7 +96,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.14em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: var(--peach);
   animation: marquee-scroll 22s linear infinite;
 }
