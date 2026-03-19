@@ -326,7 +326,8 @@ footer {
   nav { gap: 24px; }
   nav a { font-size: 26px; }
 
-  #hero { padding: 72px 80px 100px; min-height: 75vh; }
+  #hero { padding: 72px 80px 100px; }
+  .hero-inner { min-height: 425px; }
   .hero-name { font-size: clamp(120px, 14vw, 200px); }
 
   /* Wrapper (with decos) pulls to the right, out of flow */
