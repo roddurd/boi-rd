@@ -85,8 +85,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 
 .marquee-wrap {
   overflow: hidden;
-  border-top: 1px solid #2a2a35;
-  border-bottom: 1px solid #2a2a35;
+  border-top: 1px solid var(--coffee);
+  border-bottom: 1px solid var(--coffee);
   padding: 7px 0;
   margin-bottom: 36px;
 }
@@ -98,7 +98,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   letter-spacing: 0.14em;
   text-transform: lowercase;
   color: var(--peach);
-  animation: marquee-scroll 22s linear infinite;
+  animation: marquee-scroll 19s linear infinite;
 }
 @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
