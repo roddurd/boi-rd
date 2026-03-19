@@ -1,9 +1,3 @@
-/* =============================================
-   boi rd — main stylesheet
-   mobile-first · two breakpoints · no gradients
-   ============================================= */
-
-/* === VARIABLES === */
 :root {
   --bg:     #07070A;
   --fg:     #F8F8F5;
@@ -111,9 +105,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   margin-top: 16px;
 }
 .photo-hero {
-  width: 260px;
-  height: 325px;
-  object-fit: cover;
+  width: min(1010px, 100%);
+  height: auto;
   display: block;
 }
 
@@ -230,7 +223,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 
 .photo-about {
   width: 200px;
-  height: 260px;
+  height: 258px;
   object-fit: cover;
   transform: rotate(-1.5deg);
 }
@@ -327,17 +320,11 @@ footer {
   nav a { font-size: 26px; }
 
   #hero { padding: 72px 80px 100px; }
-  .hero-inner { min-height: 425px; }
   .hero-name { font-size: clamp(120px, 14vw, 200px); }
 
-  /* Wrapper (with decos) pulls to the right, out of flow */
   .photo-hero-wrap {
-    position: absolute;
-    right: 0; top: 0;
     transform: rotate(2deg);
-    margin-top: 0;
   }
-  .photo-hero { width: 340px; height: 425px; }
 
   /* Deco sizes scale up slightly on desktop */
   .deco-star     { width: 60px; height: 60px; top: -26px; right: -24px; }
