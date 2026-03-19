@@ -98,7 +98,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   letter-spacing: 0.14em;
   text-transform: lowercase;
   color: var(--peach);
-  animation: marquee-scroll 19s linear infinite;
+  animation: marquee-scroll 26s linear infinite;
 }
 @keyframes marquee-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
