@@ -147,6 +147,57 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 .deco-f1 { animation: flicker-off 0.45s steps(1) infinite; }
 .deco-f2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; animation: flicker-on 0.45s steps(1) infinite; }
 
+/* === PLAYER === */
+.player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 2px solid var(--blue);
+  max-width: 480px;
+}
+.player-btn {
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+  width: 1.2em;
+  text-align: center;
+}
+.player-btn:hover { color: var(--fg); }
+.player-scrubber {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 0;
+  background: linear-gradient(to right, var(--blue) var(--pct, 0%), #2a2a35 var(--pct, 0%));
+  cursor: pointer;
+}
+.player-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px; height: 12px;
+  background: var(--blue);
+  border-radius: 50%;
+}
+.player-scrubber::-moz-range-thumb {
+  width: 12px; height: 12px;
+  background: var(--blue);
+  border: none;
+  border-radius: 50%;
+}
+.player-time {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--plat);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 /* === MUSIC === */
 #music { border-top: 1px solid #1c1c22; }
 .music-inner {
@@ -171,7 +222,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  border: 2px solid var(--blue);
+  /* border: 2px solid var(--blue); */
   font-family: var(--mono);
   font-size: 16px;
 }

@@ -63,14 +63,21 @@
 
       <div class="music-right">
         <div class="now-playing">
-          <span class="now-playing-label">&#9654; now playing</span>
+          <span class="now-playing-label">latest single:</span>
           <span class="now-playing-title">shopnoye</span>
+        </div>
+        <audio id="player-audio" src="assets/shopnoye.mp3" preload="metadata"></audio>
+        <div class="player">
+          <button class="player-btn" id="player-btn" aria-label="Play">&#9654;</button>
+          <input class="player-scrubber" id="player-scrubber" type="range" min="0" value="0" step="0.1" aria-label="Seek">
+          <span class="player-time" id="player-time" aria-live="off">0:00 / 0:00</span>
         </div>
         <div class="streaming-links">
           <a href="https://open.spotify.com/artist/0cQD0L7QndSyRpjxNRyiF5?si=uFiDibNPSoyC3pGeY04aew" class="stream-btn" target="_blank" rel="noopener">spotify</a>
           <a href="https://music.apple.com/us/artist/boi-rd/1741258889" class="stream-btn" target="_blank" rel="noopener">apple music</a>
           <a href="https://music.youtube.com/channel/UCF7rhFDqO33h6dPwafgLJ0w?si=Ws4eQXdrWkYqwOl2" class="stream-btn" target="_blank" rel="noopener">youtube</a>
           <a href="https://www.soundcloud.com/boi-rd" class="stream-btn" target="_blank" rel="noopener">soundcloud</a>
+          <a href="https://boi-rd.bandcamp.com/" class="stream-btn" target="_blank" rel="noopener">bandcamp</a>
         </div>
       </div>
     </div>
@@ -115,10 +122,45 @@
     <div class="guestbook-wrap">
       <p class="guestbook-label">stay in the loop ↓</p>
       <!-- REPLACE: <img src="assets/arrow-down.png" width="30" height="40" alt="" class="deco-arrow-down" aria-hidden="true"> -->
-      <div class="deco-arrow-down" aria-hidden="true"></div>
+      <!-- <div class="deco-arrow-down" aria-hidden="true"></div> -->
       <script async data-uid="4f436491b4" src="https://boi-rd.kit.com/4f436491b4/index.js"></script>
     </div>
   </section>
+
+  <script>
+  (function () {
+    var audio = document.getElementById('player-audio');
+    var btn   = document.getElementById('player-btn');
+    var scrub = document.getElementById('player-scrubber');
+    var time  = document.getElementById('player-time');
+    function fmt(s) {
+      s = Math.floor(s || 0);
+      return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2);
+    }
+    function updatePct() {
+      var pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      scrub.style.setProperty('--pct', pct.toFixed(2) + '%');
+    }
+    audio.addEventListener('loadedmetadata', function () {
+      scrub.max = audio.duration;
+      time.textContent = '0:00 / ' + fmt(audio.duration);
+    });
+    audio.addEventListener('timeupdate', function () {
+      scrub.value = audio.currentTime;
+      time.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+      updatePct();
+    });
+    audio.addEventListener('ended', function () { btn.innerHTML = '&#9654;'; });
+    btn.addEventListener('click', function () {
+      if (audio.paused) { audio.play(); btn.innerHTML = '&#9646;&#9646;'; }
+      else              { audio.pause(); btn.innerHTML = '&#9654;'; }
+    });
+    scrub.addEventListener('input', function () {
+      audio.currentTime = scrub.value;
+      updatePct();
+    });
+  })();
+  </script>
 
   <!-- FOOTER -->
   <footer>
