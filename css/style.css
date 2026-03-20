@@ -23,7 +23,7 @@ section { position: relative; padding: 48px 24px; }
   display: block;
   font-size: 26px;
   letter-spacing: 0.25em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: var(--plat);
   font-weight: 400;
   margin-bottom: 28px;
@@ -279,6 +279,75 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   transform: rotate(2deg);
 }
 
+/* psst easter egg link */
+.psst-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--peach);
+  letter-spacing: 0.04em;
+  border-bottom: 1px dashed var(--peach);
+  text-transform: lowercase;
+}
+.psst-link:hover { color: var(--fg); border-color: var(--fg); }
+
+/* === LISTENING PAGE === */
+.listening-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.track-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.track-art-wrap {
+  position: relative;
+  display: inline-block;
+}
+.track-deco {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 220px;
+  height: 220px;
+  background: var(--coffee);
+  transform: skew(-4deg, 2deg);
+}
+.track-card:nth-child(even) .track-deco {
+  background: var(--blue);
+  transform: skew(3deg, -2deg);
+  top: 10px;
+  left: 14px;
+}
+.track-art {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transform: rotate(-1.5deg);
+  transition: transform 0.25s ease;
+}
+.track-card:nth-child(even) .track-art { transform: rotate(1deg); }
+.track-art-wrap:hover .track-art {
+  transform: rotate(0deg) scale(1.06);
+}
+.track-info { display: flex; flex-direction: column; gap: 4px; }
+.track-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--fg);
+  letter-spacing: -0.02em;
+}
+.track-artist {
+  font-size: 16px;
+  color: var(--plat);
+  font-weight: 400;
+}
+
 /* === CONNECT === */
 #connect { border-top: 1px solid #1c1c22; }
 .social-links {
@@ -388,4 +457,9 @@ footer {
   .about-inner   { flex-direction: row; align-items: flex-start; gap: 52px; }
   .photo-about   { width: 280px; height: 360px; }
   .deco-arrow-right { top: 24px; right: 80px; width: 72px; height: 36px; }
+
+  .listening-grid { flex-direction: row; flex-wrap: wrap; gap: 80px; align-items: flex-start; }
+  .track-deco { width: 300px; height: 300px; }
+  .track-art  { width: 300px; height: 300px; }
+  .track-card:nth-child(even) .track-deco { width: 300px; height: 300px; }
 }
