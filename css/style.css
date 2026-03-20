@@ -276,7 +276,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   width: 200px;
   height: 258px;
   object-fit: cover;
-  transform: rotate(-1.5deg);
+  transform: rotate(2deg);
 }
 
 /* === CONNECT === */
