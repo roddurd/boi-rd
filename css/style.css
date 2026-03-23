@@ -350,11 +350,17 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   background: var(--coffee);
   transform: skew(-4deg, 2deg);
 }
-.track-card:nth-child(even) .track-deco {
+.track-card:nth-child(3n+2) .track-deco {
   background: var(--blue);
   transform: skew(3deg, -2deg);
   top: 10px;
   left: 14px;
+}
+.track-card:nth-child(3n) .track-deco {
+  background: var(--peach);
+  transform: none;
+  top: 14px;
+  left: 10px;
 }
 .track-art {
   position: relative;
@@ -365,7 +371,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   transform: rotate(-1.5deg);
   transition: transform 0.25s ease;
 }
-.track-card:nth-child(even) .track-art { transform: rotate(1deg); }
+.track-card:nth-child(3n+2) .track-art { transform: rotate(1deg); }
+.track-card:nth-child(3n) .track-art { transform: rotate(-1deg); }
 .track-art-wrap:hover .track-art {
   transform: rotate(0deg) scale(1.06);
 }
@@ -497,5 +504,6 @@ footer {
   .listening-grid { flex-direction: row; flex-wrap: wrap; gap: 80px; align-items: flex-start; }
   .track-deco { width: 300px; height: 300px; }
   .track-art  { width: 300px; height: 300px; }
-  .track-card:nth-child(even) .track-deco { width: 300px; height: 300px; }
+  .track-card:nth-child(3n+2) .track-deco { width: 300px; height: 300px; }
+  .track-card:nth-child(3n) .track-deco { width: 300px; height: 300px; }
 }
