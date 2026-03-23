@@ -120,7 +120,6 @@
       <a href="https://youtube.com/@boi_rd" class="social-btn" target="_blank" rel="noopener">youtube</a>
       <a href="https://www.tiktok.com/@boi_rd" class="social-btn">tiktok</a>
       <a href="https://discord.gg/FravHgt9MH" class="social-btn">discord</a>
-      <!-- <br><br> -->
       <p>
       or email me at <a href="mailto:boirdmusic@gmail.com">boirdmusic@gmail.com</a>!  I will reply.</p>
     </div>
@@ -153,7 +152,7 @@
       scrub.value = audio.currentTime;
       time.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
       updatePct();
-    });
+    }); 
     audio.addEventListener('ended', function () { btn.innerHTML = '&#9654;'; });
     btn.addEventListener('click', function () {
       if (audio.paused) { audio.play(); btn.innerHTML = '&#9646;&#9646;'; }
