@@ -219,7 +219,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 
 .music-right { display: flex; flex-direction: column; gap: 18px; }
 
-.now-playing {
+.latest-release {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -228,8 +228,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   font-family: var(--mono);
   font-size: 16px;
 }
-.now-playing-label { color: var(--blue); }
-.now-playing-title { color: var(--fg); }
+.latest-release-label { color: var(--blue); }
+.latest-release-title { color: var(--fg); }
 
 .streaming-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .stream-btn {
@@ -281,8 +281,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   transform: rotate(2deg);
 }
 
-/* psst easter egg link */
-.psst-link {
+/* listening easter egg link */
+.listening-link {
   display: inline-block;
   margin-top: 28px;
   font-size: 12px;
@@ -292,7 +292,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   border-bottom: 1px dashed var(--peach);
   text-transform: lowercase;
 }
-.psst-link:hover { color: var(--fg); border-color: var(--fg); }
+.listening-link:hover { color: var(--fg); border-color: var(--fg); }
 
 /* === LISTENING PAGE === */
 .listening-grid {
@@ -460,7 +460,7 @@ footer {
   .photo-about   { width: 280px; height: 360px; }
   .deco-arrow-right { top: 24px; right: 80px; width: 72px; height: 36px; }
 
-  .psst-link { font-size: 14px; }
+  .listening-link { font-size: 14px; }
 
   .listening-grid { flex-direction: row; flex-wrap: wrap; gap: 80px; align-items: flex-start; }
   .track-deco { width: 300px; height: 300px; }
