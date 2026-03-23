@@ -226,7 +226,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   padding: 10px 14px;
   /* border: 2px solid var(--blue); */
   font-family: var(--mono);
-  font-size: 16px;
+  font-size: 20px;
 }
 .latest-release-label { color: var(--blue); }
 .latest-release-title { color: var(--fg); }
