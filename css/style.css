@@ -128,6 +128,36 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 .deco-sparkle-1 { position: absolute; top: -10px; left: -12px; }
 .deco-sparkle-2 { position: absolute; bottom: 20px; right: 24px; }
 
+/* Click-me hint above sparkle-2 */
+.click-me-hint {
+  position: absolute;
+  bottom: 54px;
+  right: 8px;
+  width: 52px; height: 52px;
+  pointer-events: none;
+  opacity: 0;
+  animation: click-me-pulse 5s linear infinite;
+}
+@keyframes click-me-pulse {
+  0%    { opacity: 1; }
+  12%   { opacity: 1; }
+  12.1% { opacity: 0; }
+  100%  { opacity: 0; }
+}
+/* 3-frame cycle inside the hint: f1 → f2 → f1 over 0.6s */
+.click-me-hint .deco-f1 { animation: cm-f1 0.6s linear infinite; }
+.click-me-hint .deco-f2 { animation: cm-f2 0.6s linear infinite; }
+@keyframes cm-f1 {
+  0%,    33.2% { opacity: 1; }
+  33.3%, 66.6% { opacity: 0; }
+  66.7%, 100%  { opacity: 1; }
+}
+@keyframes cm-f2 {
+  0%,    33.2% { opacity: 0; }
+  33.3%, 66.6% { opacity: 1; }
+  66.7%, 100%  { opacity: 0; }
+}
+
 /* Arrow decos */
 .deco-arrow-right {
   position: absolute;
@@ -148,7 +178,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 .deco-star-sm { position: relative; width: 26px; height: 26px; flex-shrink: 0; }
 
 /* Deco 2-frame flicker — mirrors logo pattern */
-.deco-star img, .deco-moon img, .deco-sparkle img, .deco-star-sm img, .deco-arrow-down img { width: 100%; height: 100%; display: block; }
+.deco-star img, .deco-moon img, .deco-sparkle img, .deco-star-sm img, .deco-arrow-down img, .click-me-hint img { width: 100%; height: 100%; display: block; }
 .deco-f1 { animation: flicker-off 0.45s steps(1) infinite; }
 .deco-f2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; animation: flicker-on 0.45s steps(1) infinite; }
 
