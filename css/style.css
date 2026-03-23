@@ -128,22 +128,27 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 .deco-sparkle-1 { position: absolute; top: -10px; left: -12px; }
 .deco-sparkle-2 { position: absolute; bottom: 20px; right: 24px; }
 
-/* Arrow decos still divs (PNGs not yet in assets) */
+/* Arrow decos */
 .deco-arrow-right {
   position: absolute;
   top: 32px; right: 24px;
   width: 56px; height: 28px;
   background: var(--peach);
 }
+.loop-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .deco-arrow-down {
+  display: block;
+  position: relative;
   width: 28px; height: 38px;
-  background: var(--peach);
-  margin-bottom: 14px;
 }
 .deco-star-sm { position: relative; width: 26px; height: 26px; flex-shrink: 0; }
 
 /* Deco 2-frame flicker — mirrors logo pattern */
-.deco-star img, .deco-moon img, .deco-sparkle img, .deco-star-sm img { width: 100%; height: 100%; display: block; }
+.deco-star img, .deco-moon img, .deco-sparkle img, .deco-star-sm img, .deco-arrow-down img { width: 100%; height: 100%; display: block; }
 .deco-f1 { animation: flicker-off 0.45s steps(1) infinite; }
 .deco-f2 { position: absolute; top: 0; left: 0; width: 100%; height: 100%; animation: flicker-on 0.45s steps(1) infinite; }
 
@@ -228,7 +233,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   font-family: var(--mono);
   font-size: 20px;
 }
-.latest-release-label { color: var(--blue); }
+.latest-release-label { color: var(--peach); }
 .latest-release-title { color: var(--fg); }
 
 .streaming-links { display: flex; flex-wrap: wrap; gap: 10px; }
