@@ -264,7 +264,19 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 .latest-release-label { color: var(--peach); }
 .latest-release-title { color: var(--fg); }
 
+.upcoming-release {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-family: var(--mono);
+  font-size: 20px;
+}
+.upcoming-release-label { color: var(--peach); }
+.upcoming-release-title { color: var(--fg); }
+
 .streaming-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.presave-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .stream-btn {
   display: inline-block;
   padding: 10px 16px;
