@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&display=swap');
+
 :root {
   --bg:     #07070A;
   --fg:     #F8F8F5;
@@ -7,6 +9,7 @@
   --plat:   #E0E0E0;
   --purple: #5d23a8;
   --body:   'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --serif:  'EB Garamond', Georgia, 'Times New Roman', serif;
   --mono:   'Courier New', Courier, monospace;
 }
 
@@ -259,8 +262,8 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   gap: 10px;
   padding: 10px 14px;
   /* border: 2px solid var(--blue); */
-  font-family: var(--mono);
-  font-size: 20px;
+  font-family: var(--serif);
+  font-size: 22px;
 }
 .latest-release-label { color: var(--peach); }
 .latest-release-title { color: var(--fg); }
@@ -270,7 +273,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  font-family: var(--mono);
+  font-family: var(--serif);
   font-size: 20px;
 }
 .upcoming-release-label { color: var(--peach); }
@@ -309,6 +312,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 }
 .about-card p {
   display: block;
+  font-family: var(--serif);
   font-size: 18px;
   line-height: 1.6;
   color: var(--bg);
@@ -327,9 +331,17 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 }
 
 /* listening easter egg link */
+.last-updated {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--plat);
+  margin-bottom: 28px;
+}
+
 .listening-link {
   display: inline-block;
   margin-top: 28px;
+  font-family: var(--serif);
   font-size: 12px;
   font-style: italic;
   color: var(--peach);
@@ -412,7 +424,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
 }
 
 
-.social-links p { width: 100%; font-size: 18px; color: var(--peach); margin-top: 4px; }
+.social-links p { width: 100%; font-family: var(--serif); font-size: 18px; color: var(--peach); margin-top: 4px; }
 .social-links p a { font-weight: 900; color: var(--blue); }
 
 .social-btn {
