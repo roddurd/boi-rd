@@ -61,28 +61,28 @@
     <p class="section-label">music</p>
     <div class="music-inner">
 
-      <a href="https://distrokid.com/hyperfollow/boird/caved" class="track-art-wrap" target="_blank" rel="noopener">
-        <div class="track-deco" aria-hidden="true" style="background: var(--purple)"></div>
-        <img src="assets/caved.png" width="1024" height="1024" alt="latest release cover art" class="cover-art">
+      <a href="https://open.spotify.com/track/7ivjnqRaYUTai6HsLD5l7x?si=c703fb101bd04cce" class="track-art-wrap" target="_blank" rel="noopener">
+        <div class="track-deco" aria-hidden="true" style="background: var(--coffee)"></div>
+        <img src="assets/released/no-fun.png" width="1024" height="1024" alt="no fun cover art" class="cover-art">
       </a>
 
       <div class="music-right">
         <div class="latest-release">
           <span class="latest-release-label">latest single:</span>
-          <span class="latest-release-title">caved</span>
+          <span class="latest-release-title">no fun</span>
         </div>
-        <audio id="player-audio" src="assets/caved.wav" preload="metadata"></audio>
+        <audio id="player-audio" src="assets/released/no-fun.wav" preload="metadata"></audio>
         <div class="player">
           <button class="player-btn" id="player-btn" aria-label="Play">&#9654;</button>
           <input class="player-scrubber" id="player-scrubber" type="range" min="0" value="0" step="0.1" aria-label="Seek">
           <span class="player-time" id="player-time" aria-live="off">0:00 / 0:00</span>
         </div>
         <div class="streaming-links">
-          <a href="https://open.spotify.com/artist/0cQD0L7QndSyRpjxNRyiF5?si=uFiDibNPSoyC3pGeY04aew" class="stream-btn" target="_blank" rel="noopener">spotify</a>
-          <a href="https://music.apple.com/us/artist/boi-rd/1741258889" class="stream-btn" target="_blank" rel="noopener">apple music</a>
-          <a href="https://music.youtube.com/channel/UCF7rhFDqO33h6dPwafgLJ0w?si=Ws4eQXdrWkYqwOl2" class="stream-btn" target="_blank" rel="noopener">youtube</a>
-          <a href="https://www.soundcloud.com/boi-rd" class="stream-btn" target="_blank" rel="noopener">soundcloud</a>
-          <a href="https://boi-rd.bandcamp.com/" class="stream-btn" target="_blank" rel="noopener">bandcamp</a>
+          <a href="https://open.spotify.com/track/7ivjnqRaYUTai6HsLD5l7x?si=c703fb101bd04cce" class="stream-btn" target="_blank" rel="noopener">spotify</a>
+          <a href="https://music.apple.com/us/album/no-fun/6801463945?i=6801463946" class="stream-btn" target="_blank" rel="noopener">apple music</a>
+          <a href="https://music.youtube.com/playlist?list=OLAK5uy_nI2AcIxnQ7KtIhohiZIxIC5C-dBrX3gCE&amp;si=gusQjpQOj3BMA8t2" class="stream-btn" target="_blank" rel="noopener">youtube</a>
+          <a href="https://soundcloud.com/boi-rd/no-fun" class="stream-btn" target="_blank" rel="noopener">soundcloud</a>
+          <a href="https://boi-rd.bandcamp.com/track/no-fun" class="stream-btn" target="_blank" rel="noopener">bandcamp</a>
         </div>
       </div>
     </div>
@@ -104,7 +104,7 @@
 
       <div class="track-art-wrap">
         <div class="track-deco" aria-hidden="true" style="background: var(--peach)"></div>
-        <img src="assets/caved.png" width="1024" height="1024" alt="upcoming release cover art" class="cover-art">
+        <img src="assets/released/caved.png" width="1024" height="1024" alt="upcoming release cover art" class="cover-art">
       </div>
 
       <div class="music-right">
@@ -165,7 +165,7 @@
     }
     function updatePct() {
       var pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
-      scrub.style.setProperty('--pct', pct.toFixed(2) + '%');
+      scrub.style.setProperty('--ratio', (pct / 100).toFixed(4));
     }
     audio.addEventListener('loadedmetadata', function () {
       scrub.max = audio.duration;

@@ -212,7 +212,7 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   appearance: none;
   height: 4px;
   border-radius: 0;
-  background: linear-gradient(to right, var(--blue) var(--pct, 0%), #2a2a35 var(--pct, 0%));
+  background: linear-gradient(to right, var(--blue) 0 calc(6px + (100% - 12px) * var(--ratio, 0)), #2a2a35 calc(6px + (100% - 12px) * var(--ratio, 0)));
   cursor: pointer;
 }
 .player-scrubber::-webkit-slider-thumb {
