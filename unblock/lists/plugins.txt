@@ -1,0 +1,9 @@
+# name | roles (comma separated) | note
+# placeholders, edit to match what is installed
+Omnisphere | lead, pad, keys, texture |
+Serum | bass, lead, pluck |
+Synplant | pad, texture, lead | let it mutate, keep the first thing you like.
+Operator | bass, lead, pluck |
+Wavetable | lead, pad, bass |
+Sampler | keys, texture, lead | start from a sample, not an oscillator.
+Drum Rack | drums | pick kit pieces by ear, no browsing past the first page.

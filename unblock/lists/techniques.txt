@@ -1,0 +1,11 @@
+# technique | | note
+Granulator on a vocal chop | | pitch it so it sits under the lead.
+LFO on arpeggiator time | | slow, then automate the rate.
+Resample the lead and chop it | | the chopped version replaces the original.
+Build the drums from one sample | | pitch and filter it into kick, snare and hat.
+Hold one chord for 8 bars | | all the movement comes from sound design.
+Filter automation is the hook | | no melody, only filter moves.
+Half-time the drums at the halfway point | |
+Glide and pitch-bend the bass | | no static notes.
+Sidechain the pad to the hats | | not the kick.
+Reverse one section and build from it | |

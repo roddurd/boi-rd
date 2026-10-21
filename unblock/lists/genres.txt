@@ -1,0 +1,12 @@
+# genre | years | bpm
+# the page picks a 10 year slice and a 20 bpm slice from each range
+Soul | 1965-1980 | 70-110
+Funk | 1968-1982 | 95-120
+Disco | 1974-1984 | 105-125
+Jazz | 1955-1975 | 70-150
+Brazilian | 1965-1982 | 80-130
+Indian film | 1960-1985 | 80-130
+Reggae and dub | 1970-1985 | 60-90
+Gospel | 1955-1980 | 60-120
+Psychedelic rock | 1966-1976 | 80-130
+New age and ambient | 1975-1995 | 50-100

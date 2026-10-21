@@ -1,0 +1,11 @@
+# constraint | minutes
+# the page shows a start button that runs a timer for the minutes
+Pick one preset in 5 min, no browsing after that | 5
+Drums done in 10 min | 10
+15 min on the bass only | 15
+No undo for 20 min | 20
+Loop locked by minute 25 | 25
+Rough 8-bar sketch in 30 min | 30
+Arrangement skeleton by minute 45 | 45
+Bounce whatever exists at minute 60 | 60
+Finish a rough in 90 min, then bounce | 90

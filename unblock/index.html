@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>unblock | boi rd</title>
+<meta name="description" content="a few constraints and a clock for the start of a production session. by boi rd.">
+<meta name="theme-color" content="#07070A">
+<meta property="og:title" content="unblock | boi rd">
+<meta property="og:description" content="a few constraints and a clock for the start of a production session.">
+<link rel="icon" href="/assets/star-on-black.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- EB Garamond comes from css/style.css. Libre Baskerville is only used here -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/unblock/unblock.css">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="89e648f2-d069-4d08-a55e-729ae95e92c6"></script>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="/" class="logo-wrap" aria-label="boi rd home">
+    <img class="logo logo-f1" src="/assets/logo-frame1.png" width="1920" height="1080" alt="boi rd">
+    <img class="logo logo-f2" src="/assets/logo-frame2.png" width="1920" height="1080" alt="" aria-hidden="true">
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="/#music">music</a>
+    <a href="/#about">about</a>
+    <a href="/#connect">connect</a>
+  </nav>
+</header>
+
+<main>
+  <header class="top">
+    <div class="brand">
+      <img class="star" src="/assets/star-1.png" alt="" width="26" height="26">
+      <span class="word">boi rd</span>
+    </div>
+    <h1>unblock</h1>
+    <p class="epi">a few constraints and a clock, so the first ten minutes are already decided.</p>
+  </header>
+
+  <section class="controls" aria-label="controls">
+    <div class="modes" role="group" aria-label="mode">
+      <button type="button" data-mode="start" aria-pressed="true">blank project</button>
+      <button type="button" data-mode="stuck" aria-pressed="false">stuck mid-session</button>
+    </div>
+    <button type="button" id="roll" class="primary">roll</button>
+    <button type="button" id="copy">copy roll</button>
+    <span class="hint">press r to roll</span>
+  </section>
+
+  <section id="cards" class="cards" aria-live="polite" aria-label="constraints"></section>
+
+  <section class="timer" aria-label="session timer">
+    <div class="tread">
+      <span id="tdisp" class="tdisp">90:00</span>
+      <div class="tbtns">
+        <button type="button" id="tgo" class="primary">start</button>
+        <button type="button" id="treset">reset</button>
+      </div>
+    </div>
+    <div class="track" aria-hidden="true"><div id="tfill" class="fill"></div></div>
+    <div class="presets" role="group" aria-label="timer presets">
+      <button type="button" data-min="5">5</button>
+      <button type="button" data-min="10">10</button>
+      <button type="button" data-min="25">25</button>
+      <button type="button" data-min="45">45</button>
+      <button type="button" data-min="90">90 min</button>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <button type="button" id="edit" class="link">edit lists</button>
+    <span id="msg" class="msg" aria-live="polite"></span>
+  </footer>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="deco-star-sm" aria-hidden="true">
+    <img src="/assets/star-1.png" alt="" class="deco-f1">
+    <img src="/assets/star-2.png" alt="" class="deco-f2">
+  </div>
+  <span class="footer-copy">© boi rd 2026</span>
+</footer>
+
+<dialog id="editor" aria-labelledby="edtitle">
+  <div class="dhead">
+    <h2 id="edtitle">edit lists</h2>
+    <button type="button" id="edclose">close</button>
+  </div>
+  <div id="edtabs" class="edtabs" role="group" aria-label="list"></div>
+  <p id="edhint" class="edhint"></p>
+  <textarea id="edtext" spellcheck="false" aria-label="list contents"></textarea>
+  <div class="edbtns">
+    <button type="button" id="edsave" class="primary">save</button>
+    <button type="button" id="edreset">reset to file</button>
+    <button type="button" id="eddl">download .txt</button>
+    <button type="button" id="eddone">clear done remakes</button>
+  </div>
+  <p id="edmsg" class="edhint" aria-live="polite"></p>
+</dialog>
+
+<script src="/unblock/unblock.js" defer></script>
+</body>
+</html>
