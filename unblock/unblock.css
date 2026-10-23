@@ -58,7 +58,7 @@ h1{
   font-family:var(--helv);font-weight:700;text-transform:lowercase;
   font-size:clamp(52px,11vw,104px);line-height:.95;letter-spacing:-.04em;margin:18px 0 12px;
 }
-.epi{font-family:var(--bask);font-style:italic;font-size:15px;line-height:1.5;color:var(--dim);margin:0;max-width:56ch}
+.epi{font-family:var(--bask);font-size:15px;line-height:1.5;color:var(--dim);margin:0;max-width:56ch}
 
 button,.btn{
   font-family:var(--helv);font-size:14px;font-weight:500;letter-spacing:-.005em;
