@@ -1,9 +1,30 @@
 # artist | | note | live: instruments (optional, shows a Kontakt hint)
-# placeholders, replace with your own list
-Sophie | | hard transients, pitched everything.
-Jai Paul | | rough edges, left in on purpose.
-Burial | | crackle, vocal fragments, late-night drums.
-Kaytranada | | swung drums, bass-forward.
-100 gecs | | distortion as a melody instrument.
-Arca | | rhythm that never settles.
-James Blake | | space, sub, a cracked vocal.
+# built from your Apple Music playlists, 2026-10-23: plays, how many playlists, and quarterly playlists weighted up.
+# play counts are still the incomplete local ones. revisit when Apple's history arrives.
+# notes are left blank where the card's default ("borrow the arrangement and the drum feel, not the sound") is enough
+Earl Sweatshirt | | dusty, off-grid loops. let the drums drag behind the beat.
+2hollis | | short songs, blown-out synths, club drums.
+slayr | |
+Quadeca | | big dynamic swings, orchestral and noise layers in the same track.
+MIKE | | warm soul loops, no hard quantize.
+SURF GANG | | hazy, wavy beats. the loop does the work.
+Geese | | loose live-band takes, a little unhinged. | live: Rickenbacker bass
+$uicideboy$ | | dark Memphis-style trap, distorted 808s.
+JPEGMAFIA | | chopped samples and abrupt switches mid-song.
+Smino | | bouncy, swung drums and stacked melodic vocals.
+underscores | | pop hooks, glitch edits, guitars where you don't expect them.
+Skrillex | | sound design first, build the drop before the verse.
+the sound chalk makes | |
+Dijon | | roomy and raw, vocals pushed into distortion. | live
+Baby Keem | | a beat switch somewhere in the song.
+A$AP Rocky | | cloudy, psychedelic trap.
+Travis Scott | | washed-out reverb, layered autotune, huge 808s.
+Clipse | | sparse and cold. leave room for the rap.
+Playboi Carti | | minimal synth lead, repetition as the hook.
+Yeat | | bell-like synth leads over distorted 808s.
+Danny Brown | | abrasive, strange samples.
+Charli xcx | | minimal club-pop, blown-out synths.
+James Blake | | space, sub bass, pitched and cracked vocals.
+Bladee | | glossy autotune, ethereal pads.
+Kansh | |
+KOAD | | desi samples over trap. | live: sitar, flute, tabla

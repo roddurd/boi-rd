@@ -1,5 +1,59 @@
 # song and artist | | note | live: instruments (optional, shows a Kontakt hint)
-# placeholders, replace with your own list
-Pink + White - Frank Ocean | | keep the harmony, change the groove.
-Heartbeats - Jose Gonzalez | | rebuild it as a club track.
-Nights - Frank Ocean | | flip the beat switch.
+# built from your Apple Music playlists, 2026-10-23. top songs by plays, playlist breadth and quarterly playlists, max 3 per artist.
+# names are exactly as exported so they match the playlist data.
+Leadbelly (feat. MIKE) - MIKE, Earl Sweatshirt & SURF GANG
+Cobra - Geese | | | live: Rickenbacker bass
+Home on the Range - Earl Sweatshirt & SURF GANG
+Shutter Island - MIKE & SURF GANG
+TellYourFriend - slayr
+GODSTAINED - Quadeca
+Hell N Back (feat. Summer Walker) - Bakar | | | live: Rickenbacker bass
+Call On Me - Daniel Caesar
+girl - 2hollis
+Found (feat. Brent Faiyaz) - Tems
+sidekick - 2hollis
+Do You Love Her Now - Jai Paul
+Demigod - slayr
+jaanu - KOAD | | | live: sitar, flute, tabla
+Love Blur - slayr
+areyoulistening - Gunnr
+tell me - 2hollis
+Gamma (need the <3) - Earl Sweatshirt
+confidential - Souly Had
+Poland - Lil Yachty
+Love - the sound chalk makes
+switch - Gunnr
+Live - Earl Sweatshirt
+Good Flirts (feat. Kendrick Lamar & Momo Boyd) - Baby Keem
+Dimitri - Hiatus Kaiyote | | | live
+Hate Me - Lil Yachty & ian
+HIGHER! - Dijon | | | live
+Islands of Men - Geese | | | live: Rickenbacker bass
+Yeah - Charli xcx
+DEVOTION - Justin Bieber & Dijon
+Whatever the Case - Danny Brown & ISSBROKIE
+Doesn't Just Happen - James Blake & Dave
+i'm dying to feel alive again - Casper Sage
+Camera - Charli xcx
+Rock Music - Charli xcx
+Death of Love - James Blake
+Night Freaks - Natanya
+Talk - Yeat
+Music - underscores
+Do It - underscores
+Tell Me (U Want It) - underscores
+HELICOPTER - A$AP Rocky
+NAYIKAAA - Barney Sku
+GO! - Weston Estate
+Manmade Manmaid - the sound chalk makes
+Automatic - Dijon | | | live
+Tell Em - Cochise & $NOT
+Go - ovine hall
+Digits - Young Thug
+NO TRESPASSING - A$AP Rocky
+Electronic Eyes - the sound chalk makes
+Drinking Age - Cameron Winter
+T.R.U. (Totally Rotten Underground) - $uicideboy$
+Birds & the Bees - Baby Keem
+levels - Pozzy, Saiming & t.o
+Don't Blame Me (feat. Finesse.) - Kansh
