@@ -46,13 +46,6 @@ main header{display:block}
 dialog{margin:auto}
 
 .top{margin-bottom:28px}
-.brand{display:flex;align-items:center;gap:10px}
-.word{font-family:var(--helv);font-weight:600;font-size:22px;letter-spacing:-.03em}
-.star{display:block;transform:rotate(-8deg);animation:flick 1.6s steps(1,end) infinite}
-@keyframes flick{
-  0%{opacity:1;transform:rotate(-8deg) scale(1)}
-  50%{opacity:.4;transform:rotate(-4deg) scale(1.08)}
-}
 h1{
   font-family:var(--helv);font-weight:700;text-transform:lowercase;
   font-size:clamp(52px,11vw,104px);line-height:.95;letter-spacing:-.04em;margin:18px 0 12px;
@@ -150,7 +143,6 @@ textarea{
 }
 .edbtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 
-@media (prefers-reduced-motion:reduce){.star{animation:none}}
 @media (max-width:520px){
   #roll{flex:1 1 100%}
   .hint{display:none}
