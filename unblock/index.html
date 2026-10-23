@@ -59,9 +59,13 @@
     <div class="presets" role="group" aria-label="timer presets">
       <button type="button" data-min="5">5</button>
       <button type="button" data-min="10">10</button>
-      <button type="button" data-min="25">25</button>
-      <button type="button" data-min="45">45</button>
+      <button type="button" data-min="15">15</button>
+      <button type="button" data-min="30">30</button>
       <button type="button" data-min="90">90 min</button>
+      <form id="tcustom" class="custom">
+        <input id="tmin" type="number" min="1" max="999" step="1" inputmode="numeric" placeholder="your own" aria-label="custom minutes">
+        <button type="submit">set</button>
+      </form>
     </div>
   </section>
 

@@ -372,6 +372,13 @@
   $('#tgo').addEventListener('click', () => (T.run ? stopTimer() : startTimer()));
   $('#treset').addEventListener('click', () => setTimer(T.total / 60, false));
   document.querySelectorAll('[data-min]').forEach((b) => b.addEventListener('click', () => setTimer(+b.dataset.min, false)));
+  $('#tcustom').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const m = Math.floor(+$('#tmin').value);
+    if (!(m >= 1 && m <= 999)) return;
+    setTimer(m, false);
+    $('#tmin').value = '';
+  });
 
   // list editor. edits save to this browser only. download to put them back in the site files
   const dlg = $('#editor');
