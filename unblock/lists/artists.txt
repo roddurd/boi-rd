@@ -1,4 +1,4 @@
-# artist | | note
+# artist | | note | live: instruments (optional, shows a Kontakt hint)
 # placeholders, replace with your own list
 Sophie | | hard transients, pitched everything.
 Jai Paul | | rough edges, left in on purpose.

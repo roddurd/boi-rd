@@ -1,12 +1,12 @@
-# genre | years | bpm
+# genre | years | bpm | live: instruments (shows a Kontakt hint)
 # the page picks a 10 year slice and a 20 bpm slice from each range
-Soul | 1965-1980 | 70-110
-Funk | 1968-1982 | 95-120
-Disco | 1974-1984 | 105-125
-Jazz | 1955-1975 | 70-150
-Brazilian | 1965-1982 | 80-130
-Indian film | 1960-1985 | 80-130
-Reggae and dub | 1970-1985 | 60-90
-Gospel | 1955-1980 | 60-120
-Psychedelic rock | 1966-1976 | 80-130
+Soul | 1965-1980 | 70-110 | live: brass section, string section, Rickenbacker bass
+Funk | 1968-1982 | 95-120 | live: brass section, Rickenbacker bass
+Disco | 1974-1984 | 105-125 | live: string section, brass section
+Jazz | 1955-1975 | 70-150 | live: brass section
+Brazilian | 1965-1982 | 80-130 | live: brass section, flute
+Indian film | 1960-1985 | 80-130 | live: sitar, flute, tabla
+Reggae and dub | 1970-1985 | 60-90 | live: brass section, Rickenbacker bass
+Gospel | 1955-1980 | 60-120 | live: brass section, string section
+Psychedelic rock | 1966-1976 | 80-130 | live: sitar, Rickenbacker bass
 New age and ambient | 1975-1995 | 50-100

@@ -1,9 +1,46 @@
-# name | roles (comma separated) | note
-# placeholders, edit to match what is installed
-Omnisphere | lead, pad, keys, texture |
-Serum | bass, lead, pluck |
-Synplant | pad, texture, lead | let it mutate, keep the first thing you like.
-Operator | bass, lead, pluck |
-Wavetable | lead, pad, bass |
-Sampler | keys, texture, lead | start from a sample, not an oscillator.
+# instrument | roles (comma separated) | note | weight
+# a role listed twice is twice as likely. weight defaults to 1.
+# favorites are weighted by reverse Live browser rank: least-opened favorite rolls most.
+# "# rank N" above an item is its Live browser rank count, 2026-10-23
+
+# favorites
+# rank 8
+Serum 2 | bass, lead, pluck, pad, fx hit | the sound design one. build it from an init patch or start from the pack below. | 5
+# rank 8
+Synplant | lead, pad, fx hit | weird, synthetic, alien. keep the first mutation that surprises you. | 5
+# rank 27
+ZENOLOGY | lead, lead, lead, pad, bass | trap lead territory. | 4
+# rank 57
+Kontakt 8 | sitar, flute, tabla, Indian percussion, brass section, string section, Rickenbacker bass | live instrumentation. | 3
+# rank 72
+Omnisphere | bells, fx hit, spacey pad, thumpy bass, Orchestron | browse presets in that category only. | 2
+
+# the rest
+# rank 55
+Keyscape | keys |
+# rank 24
+LABS | texture, pad, keys |
+# rank 10
+Simpler | lead, texture, bass | start from a sample, not an oscillator.
+# rank 9
 Drum Rack | drums | pick kit pieces by ear, no browsing past the first page.
+# rank 3
+Ample Guitar M II Lite | lead, keys |
+# rank 2
+Operator | bass, lead, pluck |
+# rank 2
+Tension | lead, texture |
+# rank 1
+Granulator III | texture, pad | feed it something you recorded today.
+# rank 1
+Vital | bass, lead, pluck |
+# installed, never opened
+Massive X | bass, lead |
+FabFilter One | bass, lead, pluck |
+FabFilter Twin 3 | bass, lead, pad |
+UADx PolyMAX Synth | pad, lead, bass |
+Wavetable | lead, pad, bass |
+Drift | bass, lead, pluck |
+Meld | lead, pad, texture |
+Analog | bass, lead, pad |
+Sampler | keys, texture, lead |

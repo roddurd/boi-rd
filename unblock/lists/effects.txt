@@ -1,0 +1,80 @@
+# effect | | note | weight (default 1)
+# creative effects only, paired with the palette instrument.
+# mixing and utility tools (Pro-Q, Pro-L, Glue, EQ Eight, Ozone, LA-2A, Auto-Tune, Melodyne, Tuner, Utility) are left out on purpose
+# from Live's browser rank, 2026-10-23. "# rank N" above an item is its rank count
+# rank 95
+Pro-R 2 | | as an instrument, not a send | 2
+# rank 67
+Nudistort | | gnarly and unpredictable, push it until it breaks | 3
+# rank 67
+ShaperBox 3 | |
+# rank 48
+Saturn 2 | | modulate the drive
+# rank 26
+Phaser-Flanger | |
+# rank 23
+Humanoid | |
+# rank 21
+RC-20 Retro Color | | max out one module
+# rank 19
+Delay | | sync it to an odd value
+# rank 19
+Drum Buss | |
+# rank 17
+kHs Trance Gate | |
+# rank 14
+Saturator | |
+# rank 14
+ValhallaDelay | |
+# rank 13
+ValhallaSupermassive | | huge, then automate the mix
+# rank 12
+OTT | | Multiband Dynamics preset
+# rank 11
+ValhallaVintageVerb | |
+# rank 10
+kHs Tape Stop | |
+# rank 9
+LFO | | mapped to something it shouldn't be
+# rank 8
+Erosion | |
+# rank 8
+Grain Delay | | pitch the grains
+# rank 8
+Snapback | |
+# rank 7
+Hybrid Reverb | |
+# rank 6
+Guitar Rig 7 | | on something that isn't a guitar
+# rank 6
+NeuralAmpModeler | | on something that isn't a guitar
+# rank 5
+Roar | |
+# rank 4
+Amp | |
+# rank 4
+PanCake2 | |
+# rank 4
+kHs Bitcrush | |
+# rank 3
+Chorus-Ensemble | |
+# rank 3
+kHs Pitch Shifter | |
+# rank 2
+Spectral Resonator | |
+# rank 2
+kHs Formant Filter | |
+# rank 1
+Corpus | |
+# rank 1
+Vinyl Distortion | |
+# rank 1
+Hysteresis | |
+# rank 1
+Pitch Drift | |
+# rank 1
+Auto Filter | |
+# rank 1
+Auto Pan-Tremolo | |
+# rank 2
+Filter Delay | |

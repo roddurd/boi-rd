@@ -1,0 +1,28 @@
+# instrument | preset pack | only for these roles (optional) | chance 0-1 (default 1)
+# names match the pack folders in your Ableton browser
+Serum 2 | 3YOU - 5K SERUM BANK
+Serum 2 | boi rd
+Serum 2 | KSHMR & 7 Skies - Symphony powerful basses pack | bass
+Serum 2 | Rob Late - FUTURE
+Serum 2 | Rob Late - GRANULES
+Serum 2 | Rob Late - GRAVITY
+Serum 2 | Rob Late - MOOD
+Serum 2 | Rob Late - ZEN STATE
+Serum 2 | Sam Smyers Tech House Collection Vol. 5
+Serum 2 | SOPHIE Hyperpop
+Serum 2 | Tech House Collection Vol. 1
+Serum 2 | Tech House Collection Vol. 2
+Serum 2 | Tech House Collection Vol. 3
+Serum 2 | Tech House Collection Vol. 4
+Serum 2 | UK Garage Collection
+Serum 2 | Viral Sounds Collection
+Serum 2 | VR 2024 Serum Presets
+Serum 2 | XLNT Drops Only Knocked Up Vol.1
+Serum 2 | XLNT-Drops Only Vol. 1 Serum Presets
+Serum 2 | XLNT-Quest For Bass - Serum Presets | bass
+Serum 2 | XLNT-Quest For Bass Vol.2 - Bonus Serum Presets | bass
+Serum 2 | XLNT-Quest For Bass Vol.2 - Serum Presets | bass
+Serum 2 | XLNTSOUND Drops Only Vol 2
+Serum 2 | XLNTSOUND Drops Only Vol 3
+# every now and then for ZENOLOGY leads
+ZENOLOGY | 3YOU - 3K ZENOLOGY BANK | lead | 0.35

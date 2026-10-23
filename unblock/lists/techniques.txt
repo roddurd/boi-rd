@@ -9,3 +9,7 @@ Half-time the drums at the halfway point | |
 Glide and pitch-bend the bass | | no static notes.
 Sidechain the pad to the hats | | not the kick.
 Reverse one section and build from it | |
+Arpeggiator on the chords | | then an LFO on its rate.
+Expressive Chords on a single held note | |
+Pitch device to transpose a whole section | | octave or fifth, no re-recording.
+Scale device, then play only black keys | |

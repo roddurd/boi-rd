@@ -3,7 +3,10 @@
 
   // one text file per list, fetched on load. hint shows in the editor.
   const LISTS = {
-    plugins:    { file: '/unblock/lists/plugins.txt',    hint: 'name | roles, comma separated | note' },
+    plugins:    { file: '/unblock/lists/plugins.txt',    hint: 'name | roles, comma separated | note | weight (default 1)' },
+    effects:    { file: '/unblock/lists/effects.txt',    hint: 'effect | | note | weight (default 1)' },
+    packs:      { file: '/unblock/lists/packs.txt',      hint: 'instrument | preset pack | only for these roles (optional) | chance 0-1 (default 1)' },
+    kits:       { file: '/unblock/lists/kits.txt',       hint: 'sample pack | drums, melodies or both | note' },
     techniques: { file: '/unblock/lists/techniques.txt', hint: 'technique | | note' },
     remakes:    { file: '/unblock/lists/remakes.txt',    hint: 'song and artist | | note' },
     artists:    { file: '/unblock/lists/artists.txt',    hint: 'artist | | note' },
@@ -49,7 +52,7 @@
       .filter((l) => l && l[0] !== '#')
       .map((l) => {
         const p = l.split('|').map((s) => s.trim());
-        return { name: p[0], meta: p[1] || '', note: p[2] || '' };
+        return { name: p[0], meta: p[1] || '', note: p[2] || '', f: p };
       })
       .filter((i) => i.name);
   }
@@ -58,6 +61,36 @@
   function pick(arr, avoid) {
     const pool = arr.length > 1 ? arr.filter((i) => i.name !== avoid) : arr;
     return pool[rnd(pool.length)];
+  }
+
+  // weighted pick: the 4th field on a line is its weight, default 1
+  function pickW(arr, avoid) {
+    const pool = arr.length > 1 ? arr.filter((i) => i.name !== avoid) : arr;
+    const w = pool.map((i) => Math.max(0, parseFloat(i.f[3]) || 1));
+    let r = Math.random() * w.reduce((a, b) => a + b, 0);
+    for (let k = 0; k < pool.length; k++) {
+      r -= w[k];
+      if (r < 0) return pool[k];
+    }
+    return pool[pool.length - 1];
+  }
+
+  // preset pack for an instrument: packs.txt lines are instrument | pack | roles | chance
+  function packFor(inst, role) {
+    const all = items('packs').filter((p) => p.name.toLowerCase() === inst.toLowerCase());
+    const fits = all.filter((p) => !p.note || p.note.split(',').map((s) => s.trim()).includes(role));
+    if (!fits.length) return '';
+    const p = fits[rnd(fits.length)];
+    const chance = p.f[3] ? parseFloat(p.f[3]) : 1;
+    return Math.random() < chance ? p.meta : '';
+  }
+
+  // 4th field "live" or "live: sitar, tabla" marks a seed that suits Kontakt live instrumentation
+  function liveHint(it) {
+    const v = (it.f[3] || '').trim();
+    if (!/^live/i.test(v)) return '';
+    const rest = v.replace(/^live\s*:?\s*/i, '');
+    return rest || 'brass, strings, Rickenbacker bass';
   }
 
   // "1965-1980" with a window of 10 returns a random 10 year slice
@@ -76,11 +109,22 @@
     const avoid = prev && prev.key;
 
     if (slot === 'palette') {
-      const it = pick(items('plugins'), avoid);
+      const it = pickW(items('plugins'), avoid);
       if (!it) return empty('plugins');
+      // repeating a role in the list makes it more likely
       const roles = it.meta.split(',').map((s) => s.trim()).filter(Boolean);
       const role = roles.length ? roles[rnd(roles.length)] : '';
-      return { key: it.name, title: it.name, kind: role ? 'as the ' + role : 'any role', sub: it.note };
+      // the palette stays one card: instrument, plus an effect, a preset pack and a drum kit as detail rows
+      const rows = [];
+      const fx = pickW(items('effects'), prev && prev.fx);
+      if (fx) rows.push(['through', fx.name + (fx.note ? ', ' + fx.note : '')]);
+      const pack = packFor(it.name, role);
+      if (pack) rows.push(['presets', pack]);
+      if (role !== 'drums') {
+        const kit = pick(items('kits').filter((k) => /drums|both/.test(k.meta)));
+        if (kit) rows.push(['drums', kit.name]);
+      }
+      return { key: it.name, title: it.name, kind: role ? 'as the ' + role : 'any role', sub: it.note, rows: rows, fx: fx ? fx.name : '' };
     }
 
     if (slot === 'technique') {
@@ -101,18 +145,28 @@
       if (remakes.length) kinds.push('remake');
       if (items('artists').length) kinds.push('artist');
       if (items('genres').length) kinds.push('sample');
+      const melodyPacks = items('kits').filter((k) => /melodies|both/.test(k.meta));
+      if (melodyPacks.length) kinds.push('pack');
       if (!kinds.length) return empty('remakes, artists or genres');
       const kind = kinds[rnd(kinds.length)];
+      const liveRows = (it) => (liveHint(it) ? [['kontakt', liveHint(it)]] : []);
 
       if (kind === 'remake') {
         const it = pick(remakes, avoid);
-        return { key: it.name, title: it.name, kind: 'remake', sub: it.note, remake: true, done: false };
+        return { key: it.name, title: it.name, kind: 'remake', sub: it.note, rows: liveRows(it), remake: true, done: false };
       }
       if (kind === 'artist') {
         const it = pick(items('artists'), avoid);
         return {
           key: it.name, title: it.name, kind: 'model the session on',
-          sub: it.note || 'borrow the arrangement and the drum feel, not the sound.'
+          sub: it.note || 'borrow the arrangement and the drum feel, not the sound.', rows: liveRows(it)
+        };
+      }
+      if (kind === 'pack') {
+        const it = pick(melodyPacks, avoid);
+        return {
+          key: it.name, title: it.name, kind: 'start from a pack',
+          sub: it.note || 'pull one melodic loop or one-shot and build everything around it.'
         };
       }
       const it = pick(items('genres'), avoid);
@@ -122,7 +176,7 @@
       return {
         key: it.name, title: parts.join(', '), kind: 'sample hunt',
         sub: 'set these filters on samplette.io and take the first loop that does something.',
-        link: 'https://samplette.io'
+        rows: liveRows(it), link: 'https://samplette.io'
       };
     }
     return empty(slot);
@@ -149,6 +203,11 @@
       if (d.kind) a.append(el('p', 'kind', d.kind));
       a.append(el('h2', 'val', d.title));
       if (d.sub) a.append(el('p', 'sub', d.sub));
+      if (d.rows && d.rows.length) {
+        const dl = el('dl', 'rows');
+        d.rows.forEach(([k, v]) => dl.append(el('dt', '', k), el('dd', '', v)));
+        a.append(dl);
+      }
     }
 
     const acts = el('div', 'acts');
@@ -239,7 +298,10 @@
     const lines = ['boi rd unblock'];
     MODES[S.mode].forEach((slot) => {
       const d = cardState(slot).data;
-      if (d && d.key) lines.push(slot + ': ' + d.title + (d.kind && slot === 'palette' ? ' (' + d.kind + ')' : ''));
+      if (d && d.key) {
+        lines.push(slot + ': ' + d.title + (d.kind && slot === 'palette' ? ' (' + d.kind + ')' : ''));
+        (d.rows || []).forEach(([k, v]) => lines.push('  ' + k + ': ' + v));
+      }
     });
     lines.push('boi-rd.com/unblock');
     const text = lines.join('\n');
