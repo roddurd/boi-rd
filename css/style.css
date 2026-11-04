@@ -414,30 +414,32 @@ nav a:hover { border-color: var(--blue); color: var(--blue); }
   font-weight: 400;
 }
 
-/* === CONNECT === */
-#connect { border-top: 1px solid #1c1c22; }
+/* === JOIN === */
+#join { border-top: 1px solid #1c1c22; }
 .social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 44px;
+  gap: 18px;
+  align-items: center;
+  margin-top: 36px;
 }
 
 
 .social-links p { width: 100%; font-family: var(--serif); font-size: 18px; color: var(--peach); margin-top: 4px; }
 .social-links p a { font-weight: 900; color: var(--blue); }
 
-.social-btn {
+.social-icon {
   display: inline-block;
-  padding: 12px 18px;
-  border: 3px solid var(--peach);
-  color: var(--peach);
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: lowercase;
-  letter-spacing: 0.04em;
+  width: 24px;
+  height: 24px;
 }
-.social-btn:hover { background: var(--peach); color: var(--bg); }
+.social-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: filter 0.2s;
+}
+.social-icon:hover img { filter: brightness(1.15) drop-shadow(0 0 6px rgba(238, 212, 149, 0.7)); } /* soft peach glow */
 
 .guestbook-wrap {
   border: 3px solid var(--blue);
